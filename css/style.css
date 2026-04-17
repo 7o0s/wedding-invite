@@ -1,0 +1,982 @@
+/* ============================================
+   Свадьба Кариши и Лёши — 14 июня 2026
+   Стиль: Bridgerton, English Regency Garden
+   ============================================ */
+
+/* --- CSS-переменные --- */
+:root {
+  --color-lavender: #CFC6E3;
+  --color-yellow: #FEF2AA;
+  --color-peach: #FFD599;
+  --color-pink: #F5CDD8;
+  --color-green: #C2CB94;
+  --color-blue: #A6C2E9;
+  --color-cream: #FAF5F0;
+  --color-dark: #4A3728;
+  --color-dark-light: rgba(74, 55, 40, 0.7);
+  --color-pink-light: rgba(245, 205, 216, 0.2);
+  --color-border: rgba(74, 55, 40, 0.12);
+  --color-accent: #CFC6E3; /* основной акцент — лавандовый */
+
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+  --font-accent: 'Great Vibes', cursive;
+  --font-body: 'Jost', sans-serif;
+
+  --section-padding: 100px 0;
+  --container-width: 900px;
+  --radius: 16px;
+}
+
+/* --- Сброс и базовые стили --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+/* --- Контейнер --- */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Общие стили секций --- */
+.section {
+  padding: var(--section-padding);
+}
+
+.section__label {
+  font-family: var(--font-accent);
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 0.02em;
+}
+
+/* Декоративный разделитель */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 24px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider__ornament {
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+/* ============================================
+   HERO — Главный экран
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(250, 245, 240, 0.55) 0%,
+      rgba(250, 245, 240, 0.85) 50%,
+      var(--color-cream) 100%
+    ),
+    url('../assets/photos/hero.jpg') center top / cover no-repeat;
+}
+
+/* Полупрозрачный оверлей для читаемости текста поверх фото */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 245, 240, 0.6);
+  z-index: 0;
+}
+
+/* Контент hero поверх оверлея */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__guest-label {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.hero__guest-name {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.hero__names {
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 9vw, 72px);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.hero__ampersand {
+  font-family: 'Pinyon Script', cursive;
+  font-size: clamp(36px, 7vw, 56px);
+  color: var(--color-accent);
+  display: block;
+  margin: 4px 0;
+}
+
+.hero__subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.65rem;
+  color: var(--color-dark-light);
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.hero__date {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* Таймер обратного отсчёта */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.countdown__number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-dark);
+}
+
+.countdown__label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dark-light);
+  margin-top: 6px;
+}
+
+/* Персонализированный текст */
+.hero__personal-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-dark-light);
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+
+/* Кнопка CTA */
+.btn {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 48px;
+  border: 2px solid var(--color-dark);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: var(--color-dark);
+  color: var(--color-cream);
+}
+
+.btn--primary {
+  background: var(--color-dark);
+  color: var(--color-cream);
+}
+
+.btn--primary:hover {
+  background: transparent;
+  color: var(--color-dark);
+}
+
+/* ============================================
+   О НАС — Фото пары
+   ============================================ */
+.about {
+  background: var(--color-cream);
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.about__photo {
+  width: 280px;
+  height: 380px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 8px 32px rgba(74, 55, 40, 0.08);
+}
+
+.about__text {
+  text-align: center;
+  max-width: 540px;
+}
+
+.about__text p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--color-dark-light);
+}
+
+/* ============================================
+   МЕСТО ПРОВЕДЕНИЯ
+   ============================================ */
+.venue {
+  background: white;
+}
+
+.venue__card {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.venue__icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.venue__name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.venue__address {
+  font-size: 1.1rem;
+  color: var(--color-dark-light);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.venue__map-btn {
+  margin-top: 8px;
+}
+
+/* ============================================
+   ПРОГРАММА ДНЯ
+   ============================================ */
+.timeline {
+  background: var(--color-cream);
+}
+
+.timeline__list {
+  list-style: none;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Вертикальная линия */
+.timeline__list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.timeline__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+/* Точка на линии */
+.timeline__dot {
+  width: 11px;
+  height: 11px;
+  min-width: 11px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-top: 6px;
+  position: relative;
+  left: 19px;
+  z-index: 1;
+}
+
+.timeline__body {
+  flex: 1;
+}
+
+.timeline__time {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.timeline__event {
+  font-size: 1.1rem;
+  color: var(--color-dark-light);
+}
+
+/* ============================================
+   ФОТО ПАРЫ — между программой и дресс-кодом
+   ============================================ */
+.couple-photo {
+  background: white;
+  padding: 60px 0;
+}
+
+.couple-photo__frame {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.couple-photo__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 5px solid white;
+  box-shadow: 0 12px 40px rgba(74, 55, 40, 0.1);
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .couple-photo__frame {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .couple-photo__frame {
+    max-width: 520px;
+  }
+}
+
+/* ============================================
+   ДРЕСС-КОД
+   ============================================ */
+.dresscode {
+  background: white;
+}
+
+.dresscode__palette {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dresscode__color {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 12px rgba(74, 55, 40, 0.1);
+}
+
+/* ============================================
+   RSVP — Форма подтверждения
+   ============================================ */
+.rsvp {
+  background: var(--color-cream);
+}
+
+.rsvp__form {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group__label {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Радио-кнопки */
+.radio-group {
+  display: flex;
+  gap: 12px;
+}
+
+.radio-option {
+  flex: 1;
+  position: relative;
+}
+
+.radio-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-option__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 18px;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+  text-align: center;
+}
+
+.radio-option input[type="radio"]:checked + .radio-option__label {
+  border-color: var(--color-accent);
+  background: rgba(207, 198, 227, 0.2);
+}
+
+.radio-option__label:hover {
+  border-color: var(--color-accent);
+}
+
+/* Чекбоксы */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-option {
+  position: relative;
+}
+
+.checkbox-option input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-option__label {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 22px;
+  border: 2px solid var(--color-border);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-option__label {
+  border-color: var(--color-accent);
+  background: rgba(207, 198, 227, 0.2);
+}
+
+.checkbox-option__label:hover {
+  border-color: var(--color-accent);
+}
+
+/* Текстовое поле */
+.form-textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 16px 18px;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  background: white;
+  color: var(--color-dark);
+  resize: vertical;
+  min-height: 80px;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.form-textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.form-textarea::placeholder {
+  color: rgba(74, 55, 40, 0.35);
+}
+
+/* Кнопка отправки */
+.rsvp__submit {
+  align-self: center;
+  min-width: 240px;
+}
+
+/* Сообщение об успешной отправке */
+.rsvp__success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.rsvp__success.is-visible {
+  display: block;
+}
+
+.rsvp__success-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.rsvp__success-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.rsvp__success-text {
+  color: var(--color-dark-light);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   КОНТАКТЫ
+   ============================================ */
+.contacts {
+  background: white;
+}
+
+.contacts__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contacts__item {
+  line-height: 1.6;
+}
+
+.contacts__name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.contacts__role {
+  font-size: 0.9rem;
+  color: var(--color-dark-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contacts__phone {
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+
+.contacts__phone a {
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.25s;
+}
+
+.contacts__phone a:hover {
+  border-color: var(--color-accent);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--color-cream);
+}
+
+.footer__names {
+  font-family: var(--font-accent);
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.footer__date {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-light);
+}
+
+/* ============================================
+   АНИМАЦИИ — Падающие лепестки
+   ============================================ */
+.petals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50% 0 50% 50%;
+  opacity: 0.6;
+  animation: petalFall linear forwards;
+  will-change: transform;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 0.7;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) translateX(80px);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   АНИМАЦИИ — Появление секций при скролле
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Задержки для каскадного появления дочерних элементов */
+.reveal-child {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-child.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   АДАПТИВНОСТЬ
+   ============================================ */
+
+/* Маленькие мобильные (375px и меньше) */
+@media (max-width: 400px) {
+  html {
+    font-size: 16px;
+  }
+
+  :root {
+    --section-padding: 64px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 48px 16px;
+  }
+
+  .hero__guest-name {
+    font-size: 1.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.35rem;
+    margin-bottom: 28px;
+  }
+
+  .hero__date {
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+  }
+
+  .hero__personal-text {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  .countdown {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .countdown__item {
+    min-width: 54px;
+  }
+
+  .countdown__number {
+    font-size: 2.4rem;
+  }
+
+  .countdown__label {
+    font-size: 0.7rem;
+  }
+
+  .section__title {
+    font-size: 2.1rem;
+    margin-bottom: 32px;
+  }
+
+  .section__label {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+
+  .about__photo {
+    width: 240px;
+    height: 320px;
+  }
+
+  .venue__name {
+    font-size: 1.6rem;
+  }
+
+  .timeline__list::before {
+    left: 18px;
+  }
+
+  .timeline__dot {
+    left: 13px;
+  }
+
+  .timeline__item {
+    gap: 18px;
+    padding-bottom: 28px;
+  }
+
+  .timeline__time {
+    font-size: 1.25rem;
+  }
+
+  .timeline__event {
+    font-size: 1rem;
+  }
+
+  .dresscode__color {
+    width: 46px;
+    height: 46px;
+  }
+
+  .dresscode__palette {
+    gap: 14px;
+  }
+
+  .radio-option__label {
+    padding: 14px 12px;
+    font-size: 0.95rem;
+  }
+
+  .checkbox-option__label {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .rsvp__submit {
+    min-width: 200px;
+  }
+
+  .footer__names {
+    font-size: 1.8rem;
+  }
+}
+
+/* Планшеты 768px+ */
+@media (min-width: 768px) {
+  .section__title {
+    font-size: 3.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.85rem;
+  }
+
+  .countdown {
+    gap: 40px;
+  }
+
+  .countdown__number {
+    font-size: 3.6rem;
+  }
+
+  .about__content {
+    flex-direction: row;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .about__photo {
+    width: 320px;
+    height: 420px;
+  }
+
+  .about__text {
+    text-align: left;
+  }
+
+  .dresscode__color {
+    width: 64px;
+    height: 64px;
+  }
+
+  .contacts__list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 56px;
+  }
+}
+
+/* Отключение анимаций при prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    animation: none;
+    display: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal-child {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Десктоп 1200px+ */
+@media (min-width: 1200px) {
+  :root {
+    --section-padding: 120px 0;
+    --container-width: 1000px;
+  }
+
+  .about__photo {
+    width: 360px;
+    height: 460px;
+  }
+}

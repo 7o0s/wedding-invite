@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кариша и Лёша — Свадьба 14 июня 2026</title>
+  <meta name="description" content="Приглашение на свадьбу Кариши и Лёши. 14 июня 2026, Москва, парк Царицыно, ресторан Пантеон.">
+
+  <!-- Open Graph — превью в WhatsApp, Telegram, VK -->
+  <meta property="og:title" content="Кариша & Лёша — Свадьба">
+  <meta property="og:description" content="Приглашаем вас на нашу свадьбу! 14 июня 2026, Москва, парк Царицыно, ресторан Пантеон.">
+  <meta property="og:image" content="assets/photos/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Кариша & Лёша — Свадьба">
+  <meta name="twitter:description" content="Приглашаем вас на нашу свадьбу! 14 июня 2026, Москва.">
+  <meta name="twitter:image" content="assets/photos/og-image.jpg">
+
+  <!-- Тема браузера (мобильные) -->
+  <meta name="theme-color" content="#FAF5F0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Контейнер для падающих лепестков -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <p class="hero__guest-label" id="guest-label">Дорогой гость</p>
+    <p class="hero__guest-name" id="guest-name" style="display:none;"></p>
+
+    <h1 class="hero__names">
+      Кариша
+      <span class="hero__ampersand">&amp;</span>
+      Лёша
+    </h1>
+
+    <p class="hero__subtitle">приглашают вас на свадьбу</p>
+
+    <p class="hero__date">14 июня 2026</p>
+
+    <!-- Обратный отсчёт -->
+    <div class="countdown">
+      <div class="countdown__item">
+        <span class="countdown__number" id="countdown-days">--</span>
+        <span class="countdown__label" id="countdown-days-label">дней</span>
+      </div>
+      <div class="countdown__item">
+        <span class="countdown__number" id="countdown-hours">--</span>
+        <span class="countdown__label" id="countdown-hours-label">часов</span>
+      </div>
+      <div class="countdown__item">
+        <span class="countdown__number" id="countdown-mins">--</span>
+        <span class="countdown__label" id="countdown-mins-label">минут</span>
+      </div>
+      <div class="countdown__item">
+        <span class="countdown__number" id="countdown-secs">--</span>
+        <span class="countdown__label" id="countdown-secs-label">секунд</span>
+      </div>
+    </div>
+
+    <!-- Персональный текст -->
+    <p class="hero__personal-text" id="personal-text"></p>
+
+    <a href="#rsvp" class="btn btn--primary">Подтвердить присутствие</a>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider">
+    <span class="divider__ornament">✿</span>
+  </div>
+
+  <!-- ==================== О НАС ==================== -->
+  <section class="section about reveal" id="about">
+    <div class="container">
+      <p class="section__label">Наша история</p>
+      <h2 class="section__title">О нас</h2>
+
+      <div class="about__content">
+        <img
+          src="assets/photos/hero.jpg"
+          alt="Кариша и Лёша"
+          class="about__photo"
+          loading="lazy"
+          width="1600"
+          height="2133"
+        >
+        <div class="about__text">
+          <p>
+            Мы встретились, полюбили друг друга и решили идти по жизни вместе.
+            14&nbsp;июня 2026&nbsp;года мы скажем друг другу «да» в&nbsp;окружении
+            самых близких и дорогих людей. Мы мечтаем, чтобы вы разделили
+            с&nbsp;нами этот день.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider">
+    <span class="divider__ornament">✿</span>
+  </div>
+
+  <!-- ==================== МЕСТО ПРОВЕДЕНИЯ ==================== -->
+  <section class="section venue reveal" id="venue">
+    <div class="container">
+      <p class="section__label">Где нас найти</p>
+      <h2 class="section__title">Место проведения</h2>
+
+      <div class="venue__card">
+        <div class="venue__icon">🏛</div>
+        <h3 class="venue__name">Ресторан Пантеон</h3>
+        <p class="venue__address">
+          Москва, парк Царицыно
+        </p>
+        <a
+          href="https://yandex.com/maps/-/CPvoAIkE"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn venue__map-btn"
+        >
+          Открыть на карте
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider">
+    <span class="divider__ornament">✿</span>
+  </div>
+
+  <!-- ==================== ПРОГРАММА ДНЯ ==================== -->
+  <section class="section timeline reveal" id="timeline">
+    <div class="container">
+      <p class="section__label">Как пройдёт день</p>
+      <h2 class="section__title">Программа</h2>
+
+      <ul class="timeline__list">
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <div class="timeline__body">
+            <p class="timeline__time">15:00</p>
+            <p class="timeline__event">Сбор гостей</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <div class="timeline__body">
+            <p class="timeline__time">16:00</p>
+            <p class="timeline__event">Торжественная церемония</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <div class="timeline__body">
+            <p class="timeline__time">17:00</p>
+            <p class="timeline__event">Праздничный ужин</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <div class="timeline__body">
+            <p class="timeline__time">20:00</p>
+            <p class="timeline__event">Танцы и веселье</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <div class="timeline__body">
+            <p class="timeline__time">23:00</p>
+            <p class="timeline__event">Завершение вечера</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== ФОТО ПАРЫ ==================== -->
+  <section class="section couple-photo reveal" id="couple-photo">
+    <div class="container">
+      <div class="couple-photo__frame">
+        <img
+          src="assets/photos/couple.jpg"
+          alt="Кариша и Лёша"
+          class="couple-photo__img"
+          loading="lazy"
+          width="800"
+          height="1422"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider">
+    <span class="divider__ornament">✿</span>
+  </div>
+
+  <!-- ==================== ДРЕСС-КОД ==================== -->
+  <section class="section dresscode reveal" id="dresscode">
+    <div class="container">
+      <p class="section__label">Пожелание</p>
+      <h2 class="section__title">Дресс-код</h2>
+
+      <div class="dresscode__palette">
+        <div class="dresscode__color" style="background-color: #CFC6E3;" title="Лавандовый"></div>
+        <div class="dresscode__color" style="background-color: #FEF2AA;" title="Жёлтый"></div>
+        <div class="dresscode__color" style="background-color: #FFD599;" title="Персиковый"></div>
+        <div class="dresscode__color" style="background-color: #F5CDD8;" title="Розовый"></div>
+        <div class="dresscode__color" style="background-color: #C2CB94;" title="Оливковый"></div>
+        <div class="dresscode__color" style="background-color: #A6C2E9;" title="Голубой"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider">
+    <span class="divider__ornament">✿</span>
+  </div>
+
+  <!-- ==================== RSVP ==================== -->
+  <section class="section rsvp reveal" id="rsvp">
+    <div class="container">
+      <p class="section__label">Ждём ответа</p>
+      <h2 class="section__title">Подтвердите присутствие</h2>
+
+      <form
+        id="rsvp-form"
+        class="rsvp__form"
+        action="https://formspree.io/f/mpqkpybl"
+        method="POST"
+      >
+        <!-- Скрытое поле — имя гостя из URL -->
+        <input type="hidden" name="guest" id="rsvp-guest-name" value="">
+
+        <!-- Приду / Не приду -->
+        <div class="form-group">
+          <label class="form-group__label">Сможете ли вы прийти?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" name="attendance" id="attend-yes" value="Приду" required>
+              <label for="attend-yes" class="radio-option__label">Приду</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="attendance" id="attend-no" value="Не смогу прийти">
+              <label for="attend-no" class="radio-option__label">Не смогу прийти</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Алкоголь -->
+        <div class="form-group">
+          <label class="form-group__label">Предпочтения по напиткам</label>
+          <div class="checkbox-group">
+            <div class="checkbox-option">
+              <input type="checkbox" name="drinks" id="drink-wine" value="Вино">
+              <label for="drink-wine" class="checkbox-option__label">Вино</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" name="drinks" id="drink-champagne" value="Шампанское">
+              <label for="drink-champagne" class="checkbox-option__label">Шампанское</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" name="drinks" id="drink-strong" value="Крепкий алкоголь">
+              <label for="drink-strong" class="checkbox-option__label">Крепкий</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" name="drinks" id="drink-none" value="Не пью">
+              <label for="drink-none" class="checkbox-option__label">Не пью</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Аллергии -->
+        <div class="form-group">
+          <label class="form-group__label" for="allergies">Аллергии или ограничения по питанию</label>
+          <textarea
+            id="allergies"
+            name="allergies"
+            class="form-textarea"
+            placeholder="Например: непереносимость лактозы, вегетарианство..."
+            rows="3"
+          ></textarea>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button type="submit" class="btn btn--primary rsvp__submit">Отправить</button>
+      </form>
+
+      <!-- Сообщение об успехе -->
+      <div id="rsvp-success" class="rsvp__success">
+        <div class="rsvp__success-icon">💌</div>
+        <h3 class="rsvp__success-title">Спасибо!</h3>
+        <p class="rsvp__success-text">Мы получили ваш ответ. До встречи на свадьбе!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider">
+    <span class="divider__ornament">✿</span>
+  </div>
+
+  <!-- ==================== КОНТАКТЫ ==================== -->
+  <section class="section contacts reveal" id="contacts">
+    <div class="container">
+      <p class="section__label">На связи</p>
+      <h2 class="section__title">Контакты</h2>
+
+      <div class="contacts__list">
+        <div class="contacts__item">
+          <p class="contacts__role">Жених</p>
+          <p class="contacts__name">Лёша</p>
+        </div>
+        <div class="contacts__item">
+          <p class="contacts__role">Невеста</p>
+          <p class="contacts__name">Кариша</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p class="footer__names">Кариша & Лёша</p>
+    <p class="footer__date">14 · 06 · 2026</p>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="js/main.js"></script>
+</body>
+</html>
