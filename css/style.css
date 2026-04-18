@@ -11,7 +11,7 @@
   --color-pink: #F5CDD8;
   --color-green: #C2CB94;
   --color-blue: #A6C2E9;
-  --color-cream: #FAF5F0;
+  --color-cream: #F3EBE1;
   --color-dark: #4A3728;
   --color-dark-light: rgba(74, 55, 40, 0.85);
   --color-pink-light: rgba(245, 205, 216, 0.2);
@@ -131,8 +131,8 @@ a {
   background:
     linear-gradient(
       180deg,
-      rgba(250, 245, 240, 0.55) 0%,
-      rgba(250, 245, 240, 0.85) 50%,
+      rgba(243, 235, 225, 0.55) 0%,
+      rgba(243, 235, 225, 0.85) 50%,
       var(--color-cream) 100%
     ),
     url('../assets/photos/hero.jpg') center top / cover no-repeat;
@@ -143,7 +143,7 @@ a {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(250, 245, 240, 0.6);
+  background: rgba(243, 235, 225, 0.6);
   z-index: 0;
 }
 
@@ -416,12 +416,11 @@ a {
    ФОТО ПАРЫ — между программой и дресс-кодом
    ============================================ */
 .couple-photo {
-  background: white;
-  padding: 60px 0;
+  padding: 40px 0 0;
 }
 
 .couple-photo__frame {
-  max-width: 420px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -429,20 +428,19 @@ a {
   width: 100%;
   height: auto;
   border-radius: var(--radius);
-  border: 5px solid white;
   box-shadow: 0 12px 40px rgba(74, 55, 40, 0.1);
   object-fit: cover;
 }
 
 @media (min-width: 768px) {
   .couple-photo__frame {
-    max-width: 480px;
+    max-width: 700px;
   }
 }
 
 @media (min-width: 1200px) {
   .couple-photo__frame {
-    max-width: 520px;
+    max-width: 800px;
   }
 }
 
