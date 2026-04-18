@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор шрифта для &</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Tangerine:wght@400;700&family=Alex+Brush&family=Marck+Script&family=Parisienne&family=Great+Vibes&family=Pinyon+Script&family=Dancing+Script:wght@400;700&family=Allura&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #FAF5F0;
+      color: #4A3728;
+      font-family: 'Cormorant Garamond', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      width: 100%;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .card__names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #4A3728;
+      line-height: 1.2;
+    }
+    .card__amp {
+      color: #CFC6E3;
+      display: block;
+      margin: 4px 0;
+    }
+    .card__label {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #8B7EAD;
+      letter-spacing: 0.05em;
+    }
+    .card__num {
+      display: inline-block;
+      background: #CFC6E3;
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      margin-right: 6px;
+    }
+
+    .f1 { font-family: 'Sacramento', cursive; font-size: 2.8rem; }
+    .f2 { font-family: 'Tangerine', cursive; font-size: 3.6rem; font-weight: 700; }
+    .f3 { font-family: 'Alex Brush', cursive; font-size: 3rem; }
+    .f4 { font-family: 'Marck Script', cursive; font-size: 2.8rem; }
+    .f5 { font-family: 'Parisienne', cursive; font-size: 2.8rem; }
+    .f6 { font-family: 'Great Vibes', cursive; font-size: 2.8rem; }
+    .f7 { font-family: 'Pinyon Script', cursive; font-size: 2.8rem; }
+    .f8 { font-family: 'Dancing Script', cursive; font-size: 2.6rem; font-weight: 700; }
+    .f9 { font-family: 'Allura', cursive; font-size: 3rem; }
+    .f10 { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 2.8rem; }
+  </style>
+</head>
+<body>
+  <h1>Выберите шрифт для символа &</h1>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f1">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">1</span>Sacramento</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f2">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">2</span>Tangerine</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f3">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">3</span>Alex Brush</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f4">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">4</span>Marck Script</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f5">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">5</span>Parisienne</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f6">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">6</span>Great Vibes</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f7">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">7</span>Pinyon Script</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f8">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">8</span>Dancing Script</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f9">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">9</span>Allura</p>
+    </div>
+
+    <div class="card">
+      <div class="card__names">Кариша <span class="card__amp f10">&</span> Лёша</div>
+      <p class="card__label"><span class="card__num">10</span>Cormorant Garamond Italic</p>
+    </div>
+
+  </div>
+</body>
+</html>
