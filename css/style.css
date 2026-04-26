@@ -754,27 +754,23 @@ a {
 /* ============================================
    АНИМАЦИИ — Появление секций при скролле
    ============================================ */
-.reveal {
+.reveal > .container {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s ease;
 }
 
-.reveal.is-visible {
+.reveal.is-visible > .container {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* Задержки для каскадного появления дочерних элементов */
 .reveal-child {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 .reveal-child.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* ============================================
@@ -967,9 +963,8 @@ a {
     display: none;
   }
 
-  .reveal {
+  .reveal > .container {
     opacity: 1;
-    transform: none;
     transition: none;
   }
 
