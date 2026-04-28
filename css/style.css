@@ -16,8 +16,8 @@
   --color-dark-light: rgba(74, 55, 40, 0.85);
   --color-pink-light: rgba(245, 205, 216, 0.2);
   --color-border: rgba(74, 55, 40, 0.12);
-  --color-accent: #CFC6E3; /* основной акцент — лавандовый */
-  --color-accent-dark: #8B7EAD; /* тёмный лавандовый — для текстовых лейблов */
+  --color-accent: #443427; /* основной акцент — лавандовый */
+  --color-accent-dark: #443427; /* тёмный лавандовый — для текстовых лейблов */
 
   --font-heading: 'Cormorant Garamond', 'Georgia', serif;
   --font-accent: 'Great Vibes', cursive;
@@ -190,7 +190,7 @@ a {
 }
 
 .hero__subtitle {
-  font-family: var(--font-accent);
+  font-family: var(--font-heading);
   font-size: 1.65rem;
   color: var(--color-dark-light);
   margin-top: 16px;
@@ -199,10 +199,10 @@ a {
 
 .hero__date {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 40px;
 }
 
