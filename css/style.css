@@ -23,7 +23,7 @@
   --font-accent: 'Great Vibes', cursive;
   --font-body: 'Jost', sans-serif;
 
-  --section-padding: 100px 0;
+  --section-padding: 40px 0 64px;
   --container-width: 900px;
   --radius: 16px;
 }
@@ -288,6 +288,10 @@ a {
   background: var(--color-cream);
 }
 
+.about .section__label {
+  font-size: 2.4rem;
+}
+
 .about__content {
   display: flex;
   flex-direction: column;
@@ -454,6 +458,15 @@ a {
    ============================================ */
 .dresscode {
   background: white;
+}
+
+.dresscode__text {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 28px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-dark-light);
 }
 
 .dresscode__palette {
@@ -660,6 +673,21 @@ a {
   margin-bottom: 2px;
 }
 
+.contacts__telegram {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #2AABEE;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.contacts__telegram:hover {
+  opacity: 0.7;
+}
+
 .contacts__role {
   font-size: 0.9rem;
   color: var(--color-dark-light);
@@ -801,7 +829,7 @@ a {
   }
 
   :root {
-    --section-padding: 64px 0;
+    --section-padding: 28px 0 48px;
   }
 
   .container {
@@ -982,7 +1010,7 @@ a {
 /* Десктоп 1200px+ */
 @media (min-width: 1200px) {
   :root {
-    --section-padding: 120px 0;
+    --section-padding: 48px 0 72px;
     --container-width: 1000px;
   }
 
