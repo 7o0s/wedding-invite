@@ -608,6 +608,23 @@ a {
 }
 
 /* Текстовое поле */
+.form-input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 16px 18px;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  background: white;
+  color: var(--color-dark);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.form-input:focus {
+  border-color: var(--color-accent);
+}
+
 .form-textarea {
   font-family: var(--font-body);
   font-size: 1rem;
